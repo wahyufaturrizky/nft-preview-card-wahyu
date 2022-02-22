@@ -1,25 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Card from "components/Card";
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [iShowPreview, setIShowPreview] = useState<boolean>(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="container-layout">
+      <Card
+        iShowPreview={iShowPreview}
+        setIShowPreview={setIShowPreview}
+        author="Wahyu Fatur Rizki"
+        timeLeft="3 days left"
+        value="0.041"
+        name="Equilibrium #3429"
+        desc="Our Equilibrium collection promotes balance and calm."
+      />
+      <footer>
+        <div className="attribution">
+          Challenge by{" "}
+          <a
+            rel="noreferrer"
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+          >
+            Frontend Mentor
+          </a>
+          . Coded by{" "}
+          <a
+            rel="noreferrer"
+            href="https://www.linkedin.com/in/wahyu-fatur-rizky"
+            target="_blank"
+          >
+            Wahyu Fatur Rizki
+          </a>
+          .
+        </div>
+      </footer>
+    </main>
   );
 }
 
